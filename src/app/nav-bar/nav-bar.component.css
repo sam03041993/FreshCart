@@ -1,0 +1,9 @@
+.navbar {
+    background-color: var(--main-color);
+    box-shadow: var(--shadow);
+}
+
+.navbar-brand, .nav-link {
+    color: rgb(20, 20, 20) !important;
+}
+
