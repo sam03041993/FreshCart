@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductsComponent } from './products/products.component';
@@ -7,8 +7,10 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { GategoriesComponent } from './gategories/gategories.component';
+import { NgModel } from '@angular/forms';
+import { NgModule } from '@angular/core';
 
-export const routes: Routes = [
+ export const routes: Routes = [
     {
         path:'',redirectTo:"home",pathMatch:'full'
     },
@@ -24,4 +26,11 @@ export const routes: Routes = [
     {path:'login',component:LoginComponent,title:'Login'},
     {path:'register',component:RegisterComponent,title:'Register'},
 {path:'**',component:NotfoundComponent}
-]
+];
+@NgModule({
+    imports:[RouterModule.forRoot(routes)],
+    exports:[RouterModule]
+})
+export class AppRoutngModule{
+
+}
